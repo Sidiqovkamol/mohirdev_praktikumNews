@@ -1,0 +1,30 @@
+{% extends "news/base.html " %}
+{% load static%}
+
+{% block title%}Texnologiya xabarlar {% endblock title%}
+
+{%block content%}
+
+
+
+<div class="technlogies">
+              <div class="single_post_content">
+                <h2><span>TeXnologiya</span></h2>
+
+
+                <ul class="spost_nav" >
+                  {% for texno in texnologiya_yangiliklar%}
+
+                  <li style="width:33%">
+
+                    <div class="media wow fadeInDown"> <a href="{{ texno.get_absolute_url}}" class="media-left"> <img alt="" src="{{ texno.image.url}}"> </a>
+                      <div class="media-body"> <a href="{{ texno.get_absolute_url}}" class="catg_title"> {{texno.title | truncatewords:5}}</a> </div>
+                    </div>
+                  </li>
+
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+{% endblock content%}

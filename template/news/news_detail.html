@@ -1,0 +1,10 @@
+{% extends "news/base.html"%}
+
+{% block title %}{{news.title}}{% endblock title%}
+{% block content%}
+<div>
+    <b>{{news.title}}</b>
+    <div><img id="image" src="{{news.image.url}}" width="250" alt="sport of picture"/></div>
+    <p>{{news.body}}</p>
+</div>
+{% endblock content%}
